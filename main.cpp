@@ -1,4 +1,3 @@
-#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -34,6 +33,17 @@ struct KoloryRGB {
 int main(int arc, char * argv[]) {
 
 
+    FILE* f = fopen(argv[1], "rb");
+
+    if (f == NULL)
+    {
+        printf("\n\n Can't open the file");
+        return -1;
+    }
+    else
+    {
+        printf("\n\n File f opened!");
+    }
 
     return 0;
 }
